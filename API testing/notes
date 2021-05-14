@@ -1,0 +1,25 @@
+CRUD
+----
+Create -- post
+Read -- get
+Update -- put/patch
+Delete -- delete
+
+put -- update/replace
+patch-- update/modify
+
+In Put -- all the properties of object to be provided while making request
+record exist -- will update/replace
+record does not exist -- will create
+
+{
+    "Name": "Mahesh",
+    "Job": "Automation",
+    "Location": "Chennai",
+    "Phone": 9000
+}
+
+In patch- specify only the properties that you want to update.
+{
+    "Addess": "Pune"
+}
