@@ -2,10 +2,26 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                echo 'Build App'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Test App'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploy App'
+            }
+        }
+    }
+    post{
+        always{
+            emailext body: 'Summary', subject: 'Pipeline Status', to: 'maheshbabu.kandukuri@gmail.com'
+        }
+        
     }
 }
